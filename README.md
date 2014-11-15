@@ -13,9 +13,7 @@ Here are the requirements:
 
 Here's the definition from wikipedia on what is [Fizz Buzz](http://en.wikipedia.org/wiki/Fizz_buzz)
 
-```
-Fizz buzz is a group word game for children to teach them about division.Players take turns to count incrementally, replacing any number divisible by three with the word "fizz", and any number divisible by five with the word "buzz".
-```
+> Fizz buzz is a group word game for children to teach them about division.Players take turns to count incrementally, replacing any number divisible by three with the word "fizz", and any number divisible by five with the word "buzz".
 
 For Extra Credit:
 
