@@ -8,6 +8,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.view.View;
 
+import java.util.ArrayList;
+
 public class MainActivity extends Activity {
 
     TextView textView;
@@ -51,33 +53,26 @@ public class MainActivity extends Activity {
         // Use numberOfValues, and create a string array of both the numbers and words,
         // replacing the appropriate numbers with the words fizz or buzz
 
-        editText = (EditText) findViewById(R.id.editText);
-        textView = (TextView) findViewById(R.id.fizzText);
+        editText = (EditText) findViewById(R.id.editText); // user input
+        textView = (TextView) findViewById(R.id.fizzText); // where the text will display
         textView.setText("" + "\n");
 
         int numberOfValues = Integer.parseInt(editText.getText().toString());
+
         //This reads the input from the user. Use this for your for loop.
 
 
         //--------------
         // Declare Strings Variables Here
+
+
         //--------------
 
         //--------------
         // Create the for loop and conditional statements here
         //--------------
 
-        //for ( )
-        //{
-        //
-        //
-        //
-        //  textView.append(valueString + "\n"); // display in the textView
-        //}
-
-        // Extra Credit!
         //use a while loop to count the number of Buzz words in the values Array, then display it in the console.
-
 
 
 
