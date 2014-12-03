@@ -8,7 +8,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.view.View;
 
-import java.util.ArrayList;
 
 public class MainActivity extends Activity {
 
