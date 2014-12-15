@@ -22,7 +22,7 @@
         <Button
             android:layout_width="109dp"
             android:layout_height="wrap_content"
-            android:text="Fizz Me!"
+            android:text="Play"
             android:id="@+id/button"
             android:onClick="doButton" />
 
