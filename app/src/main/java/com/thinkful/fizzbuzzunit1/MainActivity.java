@@ -71,7 +71,7 @@ public class MainActivity extends Activity {
         // Create the for loop and conditional statements here
         //--------------
 
-        //use a while loop to count the number of Buzz words in the values Array, then display it in the console.
+        
 
 
 
