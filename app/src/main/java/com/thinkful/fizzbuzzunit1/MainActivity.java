@@ -58,24 +58,7 @@ public class MainActivity extends Activity {
 
         int numberOfValues = Integer.parseInt(editText.getText().toString());
 
-        //This reads the input from the user. Use this for your for loop.
-
-
-        //--------------
-        // Declare Strings Variables Here
-
-
-        //--------------
-
-        //--------------
-        // Create the for loop and conditional statements here
-        //--------------
-
         
-
-
-
-        //--------------
 
     }
 }
