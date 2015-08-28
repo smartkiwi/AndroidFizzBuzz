@@ -2,6 +2,7 @@ package com.thinkful.fizzbuzzunit1;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
@@ -13,6 +14,10 @@ public class MainActivity extends Activity {
 
     TextView textView;
     EditText editText;
+
+    String fizzString = "Fizz";
+    String buzzString = "Buzz";
+    String fizzbuzzString = "FizzBuzz";
 
 
 
@@ -47,6 +52,11 @@ public class MainActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
+    int[] fizzArray = new int[10];
+    int[] buzzArray = new int[10];
+    int fizzIndex = 0;
+    int buzzIndex = 0;
+
     public void doButton(View view){
         // Implement the function of the button here
         // Use numberOfValues, and create a string array of both the numbers and words,
@@ -58,7 +68,53 @@ public class MainActivity extends Activity {
 
         int numberOfValues = Integer.parseInt(editText.getText().toString());
 
-        
+        String valueString = "";
 
+        for (int i = 1; i<= numberOfValues; i++) {
+
+            valueString = checkValue(i);
+
+            textView.append(valueString + "\n");
+        }
+
+        for (int i = 0; i < fizzArray.length; i++) {
+            Log.i("MyData", "fizzArray [" + i + "] = " + fizzArray[i]);
+
+        }
+
+        for (int i = 0; i < buzzArray.length; i++) {
+            Log.i("MyData","buzzArray [" + i + "] = " + buzzArray[i]);
+
+        }
+
+
+
+    }
+
+    String checkValue(int number){
+
+        String valueString = "";
+
+        if (number%3 == 0 && number%5 == 0){
+            valueString = fizzbuzzString;
+        }
+        else if (number%3 == 0) {
+            valueString = fizzString;
+            fizzArray[fizzIndex] = number;
+            fizzIndex++;
+        }
+
+        else if (number%5 == 0) {
+            valueString = buzzString;
+            buzzArray[buzzIndex] = number;
+            buzzIndex++;
+        }
+
+        else {
+            valueString = String.valueOf(number);
+
+        }
+
+        return valueString;
     }
 }
