@@ -14,7 +14,10 @@ public class MainActivity extends Activity {
     TextView textView;
     EditText editText;
 
-
+    String fizzString = "Fizz";
+    String buzzString = "Buzz";
+    String fizzBuzzString = "FizzBuzz";
+    String valueString;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +61,31 @@ public class MainActivity extends Activity {
 
         int numberOfValues = Integer.parseInt(editText.getText().toString());
 
-        
+        for (int i = 1; i <= numberOfValues; i++ )
+        {
+            valueString = checkValue(i);
 
+            textView.append(valueString + "\n"); // display in the textView
+
+        }
+
+    }
+
+    private String checkValue(int i) {
+        String result;
+        if (i % 3 == 0 && i % 5 == 0) { // divisible by both 3 and 5
+            result = fizzBuzzString;
+        }
+        else if (i % 3 == 0) {         // divisible by 3
+            result = fizzString;
+        }
+        else if (i % 5 == 0) {    // divisible by 5
+            result = buzzString;
+        }
+        else
+        {
+            result = String.valueOf(i);
+        }
+        return result;
     }
 }
