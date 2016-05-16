@@ -2,6 +2,7 @@ package com.thinkful.fizzbuzzunit1;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
@@ -18,6 +19,12 @@ public class MainActivity extends Activity {
     String buzzString = "Buzz";
     String fizzBuzzString = "FizzBuzz";
     String valueString;
+
+    int [] fizzArray = new int[10];
+    int fizzIndex = 0;
+
+    int [] buzzArray = new int[10];
+    int buzzIndex = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,6 +75,13 @@ public class MainActivity extends Activity {
             textView.append(valueString + "\n"); // display in the textView
 
         }
+        for (int i = 0; i < fizzArray.length; i++) {
+            Log.i("MyData", "fizzArray[" + i + "] = " + fizzArray[i]);
+        }
+
+        for (int i = 0; i < buzzArray.length; i++) {
+            Log.i("MyData", "buzzArray[" + i + "] = " + buzzArray[i]);
+        }
 
     }
 
@@ -78,9 +92,13 @@ public class MainActivity extends Activity {
         }
         else if (i % 3 == 0) {         // divisible by 3
             result = fizzString;
+            fizzArray[fizzIndex] = i;
+            fizzIndex++;
         }
         else if (i % 5 == 0) {    // divisible by 5
             result = buzzString;
+            buzzArray[buzzIndex] = i;
+            buzzIndex++;
         }
         else
         {
